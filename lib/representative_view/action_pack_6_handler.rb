@@ -4,10 +4,10 @@ module RepresentativeView
 
   class ActionPack6Handler
 
-    def self.call(template)
+    def self.call(template, source)
       <<-RUBY
       representative_view(formats.first) do |r|
-        #{template.source}
+        #{source}
       end
       RUBY
     end
